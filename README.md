@@ -19,11 +19,11 @@ A comprehensive Bitcoin price monitoring system that automatically tracks prices
 #### 📊 Live Demo Results
 
 ##### Google Apps Script Code Editor
-![Apps Script Code](./img/Screenshot%20from%202026-04-17%2016-22-17.png)
+![Apps Script Code](./img/bitcoin-tracker-apps-script-code.png)
 *Professional Google Apps Script implementation with CoinMarketCap API integration*
 
 ##### Google Sheets Data & Visualization
-![Google Sheets Chart](./img/Screenshot%20from%202026-04-17%2016-22-59.png)
+![Google Sheets Chart](./img/bitcoin-price-data-sheets-chart.png)
 *Real Bitcoin price data automatically logged with beautiful chart visualization*
 
 #### 🛠️ Technical Implementation
@@ -59,8 +59,8 @@ function getBitcoinPrice() {
 google-apps-script-projects/
 ├── README.md                    # This comprehensive guide
 ├── img/                         # Project screenshots
-│   ├── Screenshot from 2026-04-17 16-22-17.png  # Apps Script code
-│   └── Screenshot from 2026-04-17 16-22-59.png  # Google Sheets data
+│   ├── bitcoin-tracker-apps-script-code.png     # Apps Script implementation
+│   └── bitcoin-price-data-sheets-chart.png      # Google Sheets data & chart
 ├── bitcoin-price-tracker/       # Bitcoin tracker project
 │   ├── Code.gs                  # Main Apps Script code
 │   ├── README.md                # Detailed setup guide
