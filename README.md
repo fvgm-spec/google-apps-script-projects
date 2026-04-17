@@ -2,81 +2,65 @@
 
 A collection of Google Apps Script mini-projects for automation and data processing.
 
-![Apps Script Logo](https://developers.google.com/apps-script/images/apps-script-logo.png)
-
 ## 🚀 Projects Overview
 
 ### 1. Bitcoin Price Tracker 📈
 
 A comprehensive Bitcoin price monitoring system that automatically tracks prices, logs data to Google Sheets, and sends intelligent alerts.
 
-![Bitcoin Tracker Demo](./img/bitcoin-tracker-overview.png)
-
 #### 🎯 Key Features
 
-- **Real-time Price Fetching**: Uses CoinGecko API for accurate Bitcoin prices
+- **Real-time Price Fetching**: Uses CoinMarketCap API for accurate Bitcoin prices
 - **Automated Data Logging**: Records prices with timestamps to Google Sheets
 - **Smart Price Alerts**: Email notifications when price crosses custom thresholds
-- **Scheduled Execution**: Runs automatically every hour using Google Apps Script triggers
+- **Scheduled Execution**: Runs automatically using Google Apps Script triggers
 - **Data Visualization**: Clean, organized data perfect for charts and analysis
 
 #### 📊 Live Demo Results
 
-##### Google Sheets Integration
-![Google Sheets Data](./img/sheets-data-logging.png)
-*Automated price logging with timestamps - perfect for trend analysis*
+##### Google Apps Script Code Editor
+![Apps Script Code](./img/Screenshot%20from%202026-04-17%2016-22-17.png)
+*Professional Google Apps Script implementation with CoinMarketCap API integration*
 
-##### Price Alert System
-![Email Alerts](./img/email-alerts.png)
-*Smart email notifications when Bitcoin crosses your custom price thresholds*
-
-##### Apps Script Dashboard
-![Apps Script Console](./img/apps-script-console.png)
-*Clean execution logs and trigger management in Google Apps Script*
-
-##### Price Trend Visualization
-![Price Chart](./img/bitcoin-price-chart.png)
-*Historical price data ready for Google Sheets charts and analysis*
+##### Google Sheets Data & Visualization
+![Google Sheets Chart](./img/Screenshot%20from%202026-04-17%2016-22-59.png)
+*Real Bitcoin price data automatically logged with beautiful chart visualization*
 
 #### 🛠️ Technical Implementation
+
+The project demonstrates professional Google Apps Script development with:
+
+- **API Integration**: CoinMarketCap API for real-time cryptocurrency data
+- **Error Handling**: Robust exception management and logging
+- **Automated Scheduling**: Time-based triggers for regular execution
+- **Data Persistence**: Google Sheets as a database with automatic formatting
+- **Visualization**: Built-in Google Sheets charting for trend analysis
 
 ```javascript
 // Core price fetching function
 function getBitcoinPrice() {
-  const response = UrlFetchApp.fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+  const response = UrlFetchApp.fetch('https://api.coinmarketcap.com/v1/ticker/bitcoin/');
   const data = JSON.parse(response.getContentText());
-  return data.bitcoin.usd;
+  return parseFloat(data[0].price_usd);
 }
 ```
 
-#### 📈 Sample Output Data
+#### 📈 Project Outcomes
 
-| Timestamp | Bitcoin Price (USD) | Alert Triggered |
-|-----------|-------------------|-----------------|
-| 2026-04-17 10:00:00 | $67,234.56 | - |
-| 2026-04-17 11:00:00 | $68,891.23 | - |
-| 2026-04-17 12:00:00 | $71,456.78 | 🚀 High Alert |
-| 2026-04-17 13:00:00 | $69,234.12 | - |
-
-#### 🎨 Customization Options
-
-- **Multiple Cryptocurrencies**: Easily extend to track ETH, BTC, ADA, etc.
-- **Custom Alert Thresholds**: Set your own high/low price triggers
-- **Flexible Scheduling**: Hourly, daily, or custom intervals
-- **Advanced Notifications**: Slack, Discord, SMS integration ready
-- **Data Analysis**: Moving averages, trend detection, volatility alerts
+- **✅ Automated Data Collection**: 24/7 Bitcoin price monitoring
+- **📊 Visual Analytics**: Professional charts showing price trends
+- **🔔 Smart Notifications**: Threshold-based alert system
+- **📱 Mobile Access**: Google Sheets mobile app integration
+- **🔄 Zero Maintenance**: Set-and-forget automation
 
 ## 🏗️ Project Structure
 
 ```
 google-apps-script-projects/
 ├── README.md                    # This comprehensive guide
-├── img/                         # Demo images and screenshots
-│   ├── bitcoin-tracker-overview.png
-│   ├── sheets-data-logging.png
-│   ├── email-alerts.png
-│   ├── apps-script-console.png
-│   └── bitcoin-price-chart.png
+├── img/                         # Project screenshots
+│   ├── Screenshot from 2026-04-17 16-22-17.png  # Apps Script code
+│   └── Screenshot from 2026-04-17 16-22-59.png  # Google Sheets data
 ├── bitcoin-price-tracker/       # Bitcoin tracker project
 │   ├── Code.gs                  # Main Apps Script code
 │   ├── README.md                # Detailed setup guide
@@ -104,10 +88,14 @@ cd google-apps-script-projects
 - Test with `testBitcoinTracker()`
 - Monitor execution in Apps Script dashboard
 
-## 📱 Mobile-Friendly Alerts
+## 📱 Mobile-Friendly Features
 
-![Mobile Alert](./img/mobile-alert-demo.png)
-*Receive instant Bitcoin price alerts on your mobile device*
+The Bitcoin Price Tracker is designed for modern workflows:
+
+- **📊 Google Sheets Mobile App**: Access your data anywhere
+- **📧 Email Notifications**: Instant alerts on all devices  
+- **📱 Responsive Charts**: Beautiful visualizations on mobile
+- **☁️ Cloud Sync**: Real-time data across all platforms
 
 ## 🔮 Future Projects Pipeline
 
